@@ -7,11 +7,26 @@
 </script>
 
 <template>
-	<div v-for="weapon in weapons.weapons">
+	
+	<ul>
+	<li class="itemCard" v-for="weapon in weapons.weapons">
 		
-		<h1> {{ weapon.name }}: +{{ weapon.stats }} Price: {{ weapon.price }}</h1>
+		<h3 class="weapons"> {{ weapon.name }}: +{{ weapon.stats }} Price: {{ weapon.price }}</h3>
 		
-	</div>
+	</li>
+	</ul>
 	
 	
 </template>
+
+<style>
+	li {
+		padding: 10px;
+		list-style-type: none;
+	}
+	ul {
+		column-count: 2;
+		text-align: left;
+	}
+	
+</style>

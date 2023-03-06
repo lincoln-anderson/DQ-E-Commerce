@@ -7,5 +7,6 @@
 	{"name":"Iron Broadsword", "stats":"20", "price":"500"},
 	{"name":"Rapier", "stats":"24", "price":"750"},
 	{"name":"Steel Broadsword", "stats":"35", "price":"2000"},
-	{"name":"Cautery Sword", "stats":"42", "price":"4400"}
+	{"name":"Cautery Sword", "stats":"42", "price":"4400"},
+	{"name":"Zombiesbane", "stats":"54", "price":"6300"}
 ]}
