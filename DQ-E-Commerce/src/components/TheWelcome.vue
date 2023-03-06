@@ -5,7 +5,7 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import itemCard from './itemCard.vue'
+import weaponList from './weaponList.vue'
 import weapons from '../weapons.json'
 var passedWeapons = weapons.weapons
 </script>
@@ -15,7 +15,7 @@ var passedWeapons = weapons.weapons
     
     
     
-    <itemCard :weapons=weapons />
+    <weaponList :weapons=weapons />
   </div>
 </template>
 
