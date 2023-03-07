@@ -32,7 +32,7 @@
 		align-content: center;
 	}
 	.container {
-		display: flex;
+		display: grid;
 		  flex-wrap: wrap;
 		  justify-content: center;
 		  margin: 30px 30px 0 0;
