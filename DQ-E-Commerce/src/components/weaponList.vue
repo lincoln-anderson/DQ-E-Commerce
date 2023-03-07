@@ -1,20 +1,18 @@
 <script>
+	import ItemCard from './ItemCard.vue'
 	export default {
 		name: "weaponList",
 		props: ['weapons'],
+		components: 'ItemCard'
 }
-import ItemCard from './ItemCard.vue'
 	
 </script>
 
 <template>
-	
-	<ItemCard />
-	
 	<ul>
 	<li v-for="weapon in weapons.weapons">
 		
-		<h3> {{ weapon.name }} </h3>
+		<ItemCard :weapon=weapon />
 		
 	</li>
 	</ul>
@@ -24,12 +22,13 @@ import ItemCard from './ItemCard.vue'
 
 <style>
 	li {
-		padding: 10px;
+		padding-bottom: 8px;
+		padding-top: 8px;
 		list-style-type: none;
+		column-span: none;
 	}
 	ul {
 		column-count: 2;
-		text-align: left;
 	}
 	
 </style>

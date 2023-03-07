@@ -7,7 +7,6 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import weaponList from './weaponList.vue'
 import weapons from '../weapons.json'
-import ItemCard from './ItemCard.vue'
 var passedWeapons = weapons.weapons
 </script>
 
