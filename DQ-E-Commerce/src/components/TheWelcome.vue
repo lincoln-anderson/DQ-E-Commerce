@@ -11,7 +11,7 @@ var passedWeapons = weapons.weapons
 </script>
 
 <template>
-  <div class="items">
+  <div class="catalog">
     
     
     
@@ -21,4 +21,8 @@ var passedWeapons = weapons.weapons
 
 
 <style>
+  .catalog {
+    max-width: 1250px;
+    margin: 2rem auto;
+  }
 </style>

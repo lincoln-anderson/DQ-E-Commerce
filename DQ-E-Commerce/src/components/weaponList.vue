@@ -9,6 +9,7 @@
 </script>
 
 <template>
+	<div class="container">
 	<ul>
 	<li v-for="weapon in weapons.weapons">
 		
@@ -16,7 +17,7 @@
 		
 	</li>
 	</ul>
-	
+	</div>
 	
 </template>
 
@@ -25,10 +26,16 @@
 		padding-bottom: 8px;
 		padding-top: 8px;
 		list-style-type: none;
-		column-span: none;
 	}
 	ul {
 		column-count: 2;
+		align-content: center;
+	}
+	.container {
+		display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  margin: 30px 30px 0 0;
 	}
 	
 </style>

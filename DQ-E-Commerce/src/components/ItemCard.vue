@@ -10,9 +10,16 @@
 </script>
 <template>
 	<div class="ItemCard">
-		<h4> {{ weapon.name }} </h4>
-		<h5> attack: +{{ weapon.stats }}</h5>
-		<h5> Costs only {{ weapon.price }} gold</h5>
+		<div v-if="weapon.name.length < 25">
+			<p> {{ weapon.name }} </p>
+			<p> attack: +{{ weapon.stats }}</p>
+			<p> Costs only {{ weapon.price }} gold</p>
+		</div>
+		<div class="longerName" v-else>
+			<p> {{ weapon.name }} </p>
+			<p> attack: +{{ weapon.stats }}</p>
+			<p> Costs only {{ weapon.price }} gold</p>
+		</div>
 		
 	</div>
 	
@@ -21,8 +28,14 @@
 <style>
 	.ItemCard {
 		border: 3px solid white;
-		padding: 5px;
-		text-align: center;
+		width: 180px;
+		  height: 240px;
+		  margin: 6px;
+		  border-radius: 5px;
+		  padding: 8px 16px;
+	}
+	.longerName {
+		color: red;
 	}
 	
 </style>
