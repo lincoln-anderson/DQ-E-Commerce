@@ -21,9 +21,4 @@ var passedWeapons = weapons.weapons
 
 
 <style>
-  .items {
-    text-align: center;
-  }
-  
-  
 </style>
