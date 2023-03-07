@@ -3,15 +3,18 @@
 		name: "weaponList",
 		props: ['weapons'],
 }
+import ItemCard from './ItemCard.vue'
 	
 </script>
 
 <template>
 	
+	<ItemCard />
+	
 	<ul>
-	<li class="itemCard" v-for="weapon in weapons.weapons">
+	<li v-for="weapon in weapons.weapons">
 		
-		<h3 class="weapons"> {{ weapon.name }}: +{{ weapon.stats }} Price: {{ weapon.price }}</h3>
+		
 		
 	</li>
 	</ul>
