@@ -17,7 +17,6 @@ var passedWeapons = weapons.weapons
     
     
     <weaponList :weapons=weapons />
-    <ItemCard />
   </div>
 </template>
 

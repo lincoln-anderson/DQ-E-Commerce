@@ -14,7 +14,7 @@ import ItemCard from './ItemCard.vue'
 	<ul>
 	<li v-for="weapon in weapons.weapons">
 		
-		
+		<h3> {{ weapon.name }} </h3>
 		
 	</li>
 	</ul>
