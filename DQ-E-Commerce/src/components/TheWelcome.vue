@@ -9,7 +9,7 @@
           placeHolder="Search"
         >
       </div>
-      <div v-if="searchItemResults" class="container">
+      <div class="container">
         <ul>
           <li v-for="weapon in weapons"
           :key="weapon.id"
@@ -71,10 +71,18 @@ export default defineComponent({
           }, this.passedTimeout)
         }
     },
-    searchItemResults: function() {
+    SearchItemResults: function() {
       var localWeapons = self.weapons;
       
       var localSearchQuery = self.searchQuery;
+      
+      localSearchQuery = localSearchQuery.trim().toLowerCase();
+      
+      localServices = localServices.filter(function(item){
+        if(item.name.toLowerCase().indexOf(localSearchQuery) !== -1){
+          return item
+        }
+      })
       
       return localWeapons;
       
