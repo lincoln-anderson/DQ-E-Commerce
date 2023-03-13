@@ -1,5 +1,5 @@
 <template>
-  <div class="catalog">
+  <div class="weaponCatalog">
     <div class="catalogTop">
       <div class="catalogTopLeft">
         <h1 class="catalogTitle">Weapon Shop</h1>
@@ -111,9 +111,10 @@ export default defineComponent({
 
 
 <style>
-  .catalog {
+  .weaponCatalog {
     max-width: 1250px;
     margin: 2rem auto;
+    padding: 0 20px;
   }
   li {
     padding-bottom: 8px;
@@ -121,8 +122,11 @@ export default defineComponent({
     list-style-type: none;
   }
   ul {
-    column-count: 2;
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 20px 0 0;
+    list-style: none;
   }
   .container {
     display: grid;
