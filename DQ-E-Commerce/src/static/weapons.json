@@ -8,5 +8,9 @@
 	{"name":"Rapier", "stats":"24", "price":"750"},
 	{"name":"Steel Broadsword", "stats":"35", "price":"2000"},
 	{"name":"Cautery Sword", "stats":"42", "price":"4400"},
-	{"name":"Zombiesbane", "stats":"54", "price":"6300"}
+	{"name":"Zombiesbane", "stats":"54", "price":"6300"},
+	{"name":"Bastard Sword", "stats":"61", "price":"8800"},
+	{"name":"Aurora Blade", "stats":"70", "price":"9400"},
+	{"name":"Dragonsbane", "stats":"72", "price":"11000"},
+	{"name":"Fizzle Foil", "stats":"80", "price":"14800"}
 ]}
