@@ -10,14 +10,20 @@
         >
       </div>
       <div class="container">
-        <ul>
-          <li v-for="weapon in weapons"
-          :key="weapon.id"
-          class="weapon">
-          
-            <ItemCard :weapon=weapon />
-          </li>
-        </ul>
+        <div v-if="weapons.length != 0">
+          <div v-if="SearchItemResults.length != 0">
+            <ul>
+              <li v-for="weapon in SearchItemResults"
+              :key="weapon.id"
+              class="weapon">
+                <ItemCard :weapon=weapon />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div v-else>
+          <h2 style="color: #0A2B66; text-align: center">NO RESULTS TO YOUR API CALL</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -51,38 +57,48 @@ export default defineComponent({
     
   },
   setup() {
-    const debouncedInput = ref('')
-    const passedInput = 300
+    const input = ref('')
+    const passedTimeout = 300
     
     return {
-      debouncedInput,
-      passedInput,
+      input,
+      passedTimeout,
     }
   },
   computed: {
     searchQuery: {
       get() {
-        return this.debouncedInput
+        return this.input
       },
       set(passedValue) {
-        if (this.timeout) clearTimeout(this.timeout)
-          this.timeout = setTimeout(() => {
-            this.debouncedInput = passedValue
-          }, this.passedTimeout)
-        }
+        this.input = passedValue
+      }
     },
     SearchItemResults: function() {
-      var localWeapons = self.weapons;
+      var localWeapons = this.weapons;
       
-      var localSearchQuery = self.searchQuery;
+      if (typeof localWeapons !== 'undefined') {
+        console.log(localWeapons[0].name);
+      } else {
+        console.log('user is not defined');
+      }
       
-      localSearchQuery = localSearchQuery.trim().toLowerCase();
+      var localSearchQuery = this.input;
       
-      localServices = localServices.filter(function(item){
+      if (typeof localSearchQuery !== 'undefined') {
+        console.log(localSearchQuery);
+      } else {
+        console.log('user is not defined');
+      }
+      
+      var localSearchQuery = localSearchQuery.trim().toLowerCase();
+      
+      localWeapons = localWeapons.filter(function(item){
         if(item.name.toLowerCase().indexOf(localSearchQuery) !== -1){
           return item
         }
       })
+      
       
       return localWeapons;
       
