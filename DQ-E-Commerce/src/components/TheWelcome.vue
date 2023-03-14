@@ -8,12 +8,13 @@
           class="searchInput"
           placeHolder="Search"
         >
+        <h3> {{this.cartAmount}} </h3>
       </div>
       <div class="container">
         <div v-if="weapons.length != 0">
           <div v-if="SearchItemResults.length != 0">
             <ul>
-              <li v-for="weapon in SearchItemResults"
+              <li v-on:click="addToCart(weapon)" v-for=" weapon in SearchItemResults"
               :key="weapon.id"
               class="weapon">
                 <ItemCard :weapon=weapon />
@@ -59,10 +60,26 @@ export default defineComponent({
   setup() {
     const input = ref('')
     const passedTimeout = 300
+    const cartItems = ref([])
+    const cartAmount = ref('')
     
     return {
       input,
       passedTimeout,
+      cartItems,
+      cartAmount,
+    }
+  },
+  methods: {
+    addToCart(passedWeapon) {
+      if (this.cartItems.includes(passedWeapon.id)) {
+        console.log("already in cart")
+      } else {
+        this.cartItems.push(passedWeapon.id)
+      }
+      
+      this.cartAmount = this.cartItems.length
+      console.log(this.cartItems)
     }
   },
   computed: {
@@ -77,19 +94,7 @@ export default defineComponent({
     SearchItemResults: function() {
       var localWeapons = this.weapons;
       
-      if (typeof localWeapons !== 'undefined') {
-        console.log(localWeapons[0].name);
-      } else {
-        console.log('user is not defined');
-      }
-      
       var localSearchQuery = this.input;
-      
-      if (typeof localSearchQuery !== 'undefined') {
-        console.log(localSearchQuery);
-      } else {
-        console.log('user is not defined');
-      }
       
       var localSearchQuery = localSearchQuery.trim().toLowerCase();
       

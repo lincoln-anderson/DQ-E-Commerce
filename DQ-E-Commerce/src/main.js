@@ -8,6 +8,7 @@ import './assets/main.css'
 
 const app = createApp(App)
 app.component('ItemCard', ItemCard)
+app.config.globalProperties.$cart = ["5"]
 app.use(router)
 
 app.mount('#app')
