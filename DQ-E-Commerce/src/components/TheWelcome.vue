@@ -88,13 +88,20 @@ export default defineComponent({
         return this.input
       },
       set(passedValue) {
-        this.input = passedValue
+        if (this.timeout) clearTimeout(this.timeout)
+          this.timeout = setTimeout(() => {
+            this.input = passedValue
+          }, this.passedTimeout)
       }
     },
     SearchItemResults: function() {
       var localWeapons = this.weapons;
       
       var localSearchQuery = this.input;
+      
+      if(!localSearchQuery || localSearchQuery.length < 2){
+        return localWeapons
+      }
       
       var localSearchQuery = localSearchQuery.trim().toLowerCase();
       
