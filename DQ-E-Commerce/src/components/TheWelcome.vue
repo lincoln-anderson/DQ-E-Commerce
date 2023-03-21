@@ -40,6 +40,7 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import ItemCard from './ItemCard.vue'
+import Square from './square.vue'
 
 export default defineComponent({
   name: 'TheWelcome',
@@ -59,7 +60,7 @@ export default defineComponent({
   },
   setup() {
     const input = ref('')
-    const passedTimeout = 300
+    const passedTimeout = 500
     const cartItems = ref([])
     const cartAmount = ref('')
     
