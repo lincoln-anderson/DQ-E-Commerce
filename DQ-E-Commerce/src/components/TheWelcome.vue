@@ -147,4 +147,16 @@ export default defineComponent({
       justify-content: center;
       margin: 30px 30px 0 0;
   }
+  @media (max-width: 600px) {
+    .weaponCatalog {
+      max-width: 1250px;
+      margin: 1rem auto;
+    }
+    .container {
+      display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px 30px 0 0;
+    }
+  }
 </style>
