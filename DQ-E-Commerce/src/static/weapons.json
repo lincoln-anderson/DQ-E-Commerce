@@ -1,16 +1,122 @@
 {"weapons":[
-	{"name":"Cypress Stick", "stats":"7", "price":"10", "id":"1"},
-	{"name":"Cobblestone Sword", "stats":"8", "price":"60", "id":"2"},
- 	{"name":"Soldier's Sword", "stats": "10", "price":"120", "id":"3"},
-	{"name":"Copper Sword", "stats":"13", "price":"270", "id":"4"},
-	{"name":"Bronze Sword", "stats":"16", "price":"340", "id":"5"},
-	{"name":"Iron Broadsword", "stats":"20", "price":"500", "id":"6"},
-	{"name":"Rapier", "stats":"24", "price":"750", "id":"7"},
-	{"name":"Steel Broadsword", "stats":"35", "price":"2000", "id":"8"},
-	{"name":"Cautery Sword", "stats":"42", "price":"4400", "id":"9"},
-	{"name":"Zombiesbane", "stats":"54", "price":"6300", "id":"10"},
-	{"name":"Bastard Sword", "stats":"61", "price":"8800", "id":"11"},
-	{"name":"Aurora Blade", "stats":"70", "price":"9400", "id":"12"},
-	{"name":"Dragonsbane", "stats":"72", "price":"11000", "id":"13"},
-	{"name":"Fizzle Foil", "stats":"80", "price":"14800", "id":"14"}
+	  {
+		"name": "Shirt",
+		"stats": "Nike",
+		"price": 30,
+		"id": 1
+	  },
+	  {
+		"name": "Shoes",
+		"stats": "Adidas",
+		"price": 40,
+		"id": 2
+	  },
+	  {
+		"name": "Jeans",
+		"stats": "Levi's",
+		"price": 50,
+		"id": 3
+	  },
+	  {
+		"name": "T-Shirt",
+		"stats": "H&M",
+		"price": 25,
+		"id": 4
+	  },
+	  {
+		"name": "Dress",
+		"stats": "Zara",
+		"price": 35,
+		"id": 5
+	  },
+	  {
+		"name": "Sweater",
+		"stats": "Nike",
+		"price": 45,
+		"id": 6
+	  },
+	  {
+		"name": "Jacket",
+		"stats": "Adidas",
+		"price": 55,
+		"id": 7
+	  },
+	  {
+		"name": "Hat",
+		"stats": "Nike",
+		"price": 20,
+		"id": 8
+	  },
+	  {
+		"name": "Gloves",
+		"stats": "Adidas",
+		"price": 30,
+		"id": 9
+	  },
+	  {
+		"name": "Socks",
+		"stats": "Nike",
+		"price": 15,
+		"id": 10
+	  },
+	  {
+		"name": "Belt",
+		"stats": "Levi's",
+		"price": 25,
+		"id": 11
+	  },
+	  {
+		"name": "Wallet",
+		"stats": "Nike",
+		"price": 35,
+		"id": 12
+	  },
+	  {
+		"name": "Pouch",
+		"stats": "Zara",
+		"price": 20,
+		"id": 13
+	  },
+	  {
+		"name": "Bag",
+		"stats": "Nike",
+		"price": 40,
+		"id": 14
+	  },
+	  {
+		"name": "Purse",
+		"stats": "Zara",
+		"price": 35,
+		"id": 15
+	  },
+	  {
+		"name": "Tote",
+		"stats": "Nike",
+		"price": 45,
+		"id": 16
+	  },
+	  {
+		"name": "Sunglasses",
+		"stats": "Nike",
+		"price": 25,
+		"id": 17
+	  },
+	  {
+		"name": "Hat",
+		"stats": "Adidas",
+		"price": 30,
+		"id": 18
+	  },
+	  {
+		"name": "Gloves",
+		"stats": "Nike",
+		"price": 35,
+		"id": 19
+	  },
+	  {
+		"name": "Socks",
+		"stats": "Adidas",
+		"price": 20,
+		"id": 20
+	  }
 ]}

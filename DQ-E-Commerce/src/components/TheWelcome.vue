@@ -2,7 +2,7 @@
   <div class="weaponCatalog">
     <div class="catalogTop">
       <div class="catalogTopLeft">
-        <h1 class="catalogTitle">Weapon Shop</h1>
+        <h1 class="catalogTitle">CLOTHING STORE</h1>
         <input 
           v-model="searchQuery"
           class="searchInput"

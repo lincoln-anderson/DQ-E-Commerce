@@ -12,7 +12,7 @@
 	<div class="ItemCard">
 		<div v-if="weapon.name.length < 25">
 			<p> {{ weapon.name }} </p>
-			<p> attack: +{{ weapon.stats }}</p>
+			<p> Brand: {{ weapon.stats }}</p>
 			<p> Costs: {{ weapon.price }}</p>
 		</div>
 		<div class="longerName" v-else>
