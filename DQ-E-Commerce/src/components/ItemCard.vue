@@ -5,7 +5,7 @@
 				weapon: {
 					type: Object
 				}
-				}
+			}
 	}
 </script>
 <template>

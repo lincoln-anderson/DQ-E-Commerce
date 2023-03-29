@@ -25,6 +25,9 @@
         <div v-else>
           <h2 style="color: #0A2B66; text-align: center">NO RESULTS TO YOUR API CALL</h2>
         </div>
+        <div>
+          <Cart :items=cartItems />
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +44,7 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import ItemCard from './ItemCard.vue'
 import Square from './square.vue'
+import Cart from './Cart.vue'
 
 export default defineComponent({
   name: 'TheWelcome',
@@ -63,21 +67,28 @@ export default defineComponent({
     const passedTimeout = 500
     const cartItems = ref([])
     const cartAmount = ref('')
+    const cartQuantities = ref([])
     
     return {
       input,
       passedTimeout,
       cartItems,
       cartAmount,
+      cartQuantities,
     }
   },
   methods: {
     addToCart(passedWeapon) {
-      if (this.cartItems.includes(passedWeapon.id)) {
-        console.log("already in cart")
+      if (this.cartItems.includes(passedWeapon)) {
+        console.log("increased quantity")
+        this.cartQuantities[passedWeapon.id] = this.cartQuantities[passedWeapon.id] + 1
       } else {
-        this.cartItems.push(passedWeapon.id)
+        this.cartItems.push(passedWeapon)
+        this.cartQuantities[passedWeapon.id] = 1;
       }
+      
+      
+      console.log(this.cartQuantities)
       
       this.cartAmount = this.cartItems.length
       console.log(this.cartItems)
