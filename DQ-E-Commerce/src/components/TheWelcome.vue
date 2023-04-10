@@ -26,7 +26,7 @@
           <h2 style="color: #0A2B66; text-align: center">NO RESULTS TO YOUR API CALL</h2>
         </div>
         <div>
-          <Cart :items=cartItems />
+          <Cart :items=cartItems :itemQuantities=cartQuantities />
         </div>
       </div>
     </div>
