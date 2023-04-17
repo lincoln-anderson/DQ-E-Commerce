@@ -5,11 +5,13 @@ import ItemCard from './components/ItemCard.vue'
 import Square from './components/square.vue'
 import Cart from './components/Cart.vue'
 import CartItem from './components/CartItem.vue'
+import CartModal from './components/CartModal.vue'
 
 import './assets/main.css'
 
 
 const app = createApp(App)
+app.component('CartModal', CartModal)
 app.component('ItemCard', ItemCard)
 app.component('Square', Square)
 app.component('Cart', Cart)
